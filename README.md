@@ -17,35 +17,34 @@ Basic example of how to setup a reactTs project
 
 ## Concerning the organisation of files
 
-/src
-|-- /components
-|   |-- /Button
-|   |   |-- Button.tsx
-|   |   |-- Button.css
-|   
-|-- /pages
-|   |-- /Home
-|   |   |-- Home.tsx
-|   |   |-- Home.css
-|   
-|-- /utils
-|   |-- constants.ts
-|
-|-- /assets
-|   |-- /images
-|   |-- /fonts
-|
-|-- /styles
-|   |-- main.css
-|   |-- variables.css
-|
-|-- /config
-|   |-- ways.ts
-|
-|-- main.tsx
-|-- tsconfig.json
-|-- package.json
-|-- README.md
+- src
+	- components
+		- Button
+			- Button.tsx
+			- Button.css
+ 
+	- pages
+		- Home
+			- Home.tsx
+			- Home.css
+
+	- utils
+		- constants.ts
+	- assets
+		- images
+		- fonts
+
+	- styles
+		- main.css
+		- variables.css
+
+	- config
+		- ways.ts
+
+- main.tsx
+- tsconfig.json
+- package.json
+- README.md
 
 	
 	
