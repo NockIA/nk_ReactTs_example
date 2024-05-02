@@ -36,7 +36,7 @@ npm run dev
 
 ## Concerning the organisation of files
 
-
+```
 ├── public
 │	└── images
 │		├── icons
@@ -81,6 +81,7 @@ npm run dev
 ├── tsconfig.json
 ├── package.json
 └── README.md
+```
 
 	
 	
