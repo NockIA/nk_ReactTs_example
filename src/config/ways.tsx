@@ -1,14 +1,20 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from "../pages/App/App";
-import { ErrorPage } from "../pages/Error/error";
+import Home from "../views/home/home";
+import SignIn from "../components/auth/signin";
+import SignUp from "../components/auth/signup";
+import ErrorPage from "../views/error/error";
 
-export const Ways = () => {
+const Ways: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App/>}></Route>
-        <Route path="*" element={<ErrorPage/>}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/" element={<SignIn />}></Route>
+        <Route path="/signup" element={<SignUp />}></Route>
+        <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
     </BrowserRouter>
   );
 };
+
+export default Ways;
