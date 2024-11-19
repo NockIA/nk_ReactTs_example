@@ -1,0 +1,30 @@
+
+@use '@styles/_palette' as palette;
+
+.home {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  box-sizing: border-box;
+  padding: 3rem;
+  gap: 1.5rem;
+  h1 {
+    color: palette.$primary-color;
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    margin-top: 8rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 769px) {
+  .home {
+    margin-top: 10rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

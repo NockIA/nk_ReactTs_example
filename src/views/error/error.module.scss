@@ -1,0 +1,65 @@
+@use '@styles/_palette' as palette;
+
+
+.errorPage {
+  background-color: palette.$background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: palette.$gray;
+  padding: 20px;
+  text-align: center;
+}
+
+.errorContainer {
+  background: palette.$light-background;
+  border: 2px solid palette.$border;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.errorCode {
+  font-size: 8rem;
+  font-weight: 700;
+  color: palette.$error-color;
+}
+
+.errorMessage {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.homeButton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: palette.$primary-color;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: palette.$secondary-color;
+  }
+}
+
+@media (max-width: 768px) {
+  .errorCode {
+    font-size: 6rem;
+  }
+
+  .errorMessage {
+    font-size: 1.2rem;
+  }
+
+  .homeButton {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
