@@ -1,12 +1,14 @@
-$primary-color: #ec4432;
-$secondary-color: #2d1c1b;
+:root {
+  --primary-color: #ec4432;
+  --secondary-color: #2d1c1b;
 
-$light-background: #18181b;
-$background: #000000;
+  --light-background: #18181b;
+  --background: #000000;
 
-$border: #27272a;
+  --border: #27272a;
 
-$white: #fefefe;
-$gray: #8b8b8c;
+  --white: #fefefe;
+  --gray: #8b8b8c;
 
-$error-color: #e74c3c;
+  --error-color: #e74c3c;
+}

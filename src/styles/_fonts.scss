@@ -1,3 +1,5 @@
+/* -------------------- Épaisseur ---------------------*/
+
 $font-weights: (
   100: "Thin",
   200: "ExtraLight",
@@ -9,10 +11,14 @@ $font-weights: (
   900: "Black",
 );
 
+/* -------------------- Style ---------------------*/
+
 $font-styles: (
   normal: "",
   italic: "Italic",
 );
+
+/* ----------- Récupération des fichiers de fonts Poppins ----------- */
 
 @each $weight, $name in $font-weights {
   @each $style, $suffix in $font-styles {

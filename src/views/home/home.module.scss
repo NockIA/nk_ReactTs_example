@@ -1,19 +1,4 @@
-
-@use '@styles/_palette' as palette;
-
-.home {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  box-sizing: border-box;
-  padding: 3rem;
-  gap: 1.5rem;
-  h1 {
-    color: palette.$primary-color;
-    font-size: 24px;
-    font-weight: 500;
-  }
-}
+/* -------------------- Responsive ---------------------*/
 
 @media (max-width: 768px) {
   .home {
@@ -26,5 +11,24 @@
   .home {
     margin-top: 10rem;
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* -------------------- Code ---------------------*/
+
+// ### Page ### //
+.home {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  box-sizing: border-box;
+  padding: 3rem;
+  gap: 1.5rem;
+
+  // ### TItre ### //
+  h1 {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 500;
   }
 }

@@ -1,0 +1,94 @@
+/* -------------------- Responsive ---------------------*/
+
+@media (max-width: 400px) {
+  .hero {
+    gap: 2rem;
+
+    h1 {
+      font-size: 30px;
+      line-height: 40px;
+      font-weight: 700;
+
+      span {
+        font-size: 50px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: 401px) {
+  .hero {
+    gap: 2rem;
+
+    h1 {
+      font-size: 60px;
+      line-height: 90px;
+      font-weight: 800;
+
+      span {
+        font-size: 90px;
+      }
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+/* -------------------- Code ---------------------*/
+
+.hero {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+
+  h1 {
+    color: var(--white);
+
+    span {
+      color: var(--primary-color);
+    }
+  }
+
+  p {
+    color: var(--white);
+    font-weight: 300;
+  }
+
+  .links {
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      gap: 1rem;
+      padding: 0.5rem 2rem;
+      border: 1px solid var(--primary-color);
+      background-color: var(--secondary-color);
+
+      img {
+        width: 24px;
+        object-fit: contain;
+      }
+    }
+  }
+}

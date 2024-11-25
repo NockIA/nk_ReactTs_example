@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
-import { homeLink } from "../../utils/nav-links";
+import { homeLink } from "../../constants/nav-links";
 import styles from "./error.module.scss";
+import { useEffect } from "react";
 
 const ErrorPage: React.FC = () => {
+  // ### Modification du titre de la page ### //
+  useEffect(() => {
+    document.title = "Nk | 404";
+  }, []);
+
   return (
     <div className={styles.errorPage}>
       <div className={styles.errorContainer}>

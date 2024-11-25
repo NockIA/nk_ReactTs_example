@@ -1,26 +1,18 @@
 import { useEffect } from "react";
-import Navbar from "../../components/shared/nav/nav";
-import SectionParagraph from "../../components/views/home/section-paragraph";
-import { homeParagraphs } from "../../utils/home-content";
+import Navbar from "../../components/layout/nav/nav";
 import styles from "./home.module.scss";
+import HeroSectionHome from "../../components/views/home/hero";
 
 const Home: React.FC = () => {
   useEffect(() => {
-    document.title = "Home";
+    document.title = "Nk | Home";
   }, []);
 
   return (
     <>
       <Navbar />
       <main className={styles.home}>
-        {homeParagraphs.map((paragraph, index) => (
-          <SectionParagraph
-            key={index}
-            title={paragraph.title}
-            content={paragraph.content}
-            iconPath={paragraph.iconPath}
-          />
-        ))}
+          <HeroSectionHome/>
       </main>
     </>
   );

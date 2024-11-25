@@ -1,5 +1,5 @@
 /* -------------------- Fonts ---------------------*/
-@use "@styles/_palette" as palette;
+
 @use "@styles/_fonts" as font;
 
 /* ------------------ Containers ------------------*/
@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  background-color: palette.$background;
+  background-color: var(--background);
 }
 
 main {
