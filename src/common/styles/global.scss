@@ -1,0 +1,30 @@
+/* -------------------- Fonts ---------------------*/
+
+@use './fonts' as font;
+
+/* ------------------ Containers ------------------*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--white-bg, #f5f5f7);
+}
+
+/* -------------------- Texts ---------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+$mobile-nav-height: 60px;

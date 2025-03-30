@@ -1,0 +1,32 @@
+/* -------------------- Épaisseur ---------------------*/
+
+$font-weights: (
+  100: 'Thin',
+  200: 'ExtraLight',
+  300: 'Light',
+  400: 'Regular',
+  500: 'Medium',
+  600: 'SemiBold',
+  700: 'Bold',
+  900: 'Black',
+);
+
+/* -------------------- Style ---------------------*/
+
+$font-styles: (
+  normal: '',
+  italic: 'Italic',
+);
+
+/* ----------- Récupération des fichiers de fonts Poppins ----------- */
+
+@each $weight, $name in $font-weights {
+  @each $style, $suffix in $font-styles {
+    @font-face {
+      font-family: 'Poppins';
+      src: url('/assets/fonts/poppins/Poppins-#{$name}#{$suffix}.ttf') format('woff2');
+      font-weight: #{$weight};
+      font-style: #{$style};
+    }
+  }
+}
