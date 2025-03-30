@@ -1,0 +1,256 @@
+/* -------------------- Variables ---------------------*/
+$breakpoint-xl: 1400px;
+$breakpoint-lg: 1200px;
+$breakpoint-md: 1100px;
+$breakpoint-md-plus: $breakpoint-md + 1;
+$breakpoint-sm: 1000px;
+$breakpoint-xs: 600px;
+$gap-small: 1.3rem;
+$gap-medium: 1.8rem;
+
+/* -------------------- Mixins ---------------------*/
+@mixin responsive-bg($factor) {
+  transform: translateX(calc((-100vh / 8) * #{$factor}));
+  margin-right: calc((-100vh / 8) * #{$factor});
+}
+
+@mixin input-styles($padding, $font-size) {
+  padding: $padding;
+  font-size: $font-size;
+}
+
+@mixin button-styles($padding, $font-size) {
+  padding: $padding;
+  font-size: $font-size;
+  transition: 0.3s;
+  background-color: var(--black);
+  border: 2px solid var(--black);
+  color: var(--white);
+  border-radius: 10px;
+  &:hover {
+    background-color: var(--deep-gray);
+    border-color: var(--deep-gray);
+  }
+  &:focus {
+    border-color: var(--purple);
+  }
+}
+
+/* -------------------- Responsive ---------------------*/
+@media (max-width: $breakpoint-xl) {
+  .background {
+    @include responsive-bg(2);
+  }
+  .form_wrap {
+    width: 100vw;
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .background {
+    @include responsive-bg(4);
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .background {
+    @include responsive-bg(5);
+  }
+}
+
+@media (min-width: $breakpoint-md-plus) {
+  .container_auth {
+    .form_wrap {
+      padding: $gap-medium;
+    }
+    .form_container {
+      .logo {
+        display: none;
+      }
+      h1 {
+        text-align: center;
+        font-size: 47px;
+      }
+      .description {
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: $gap-medium;
+      }
+      form {
+        gap: $gap-medium;
+        input {
+          @include input-styles(1rem, 16px);
+        }
+        button {
+          margin-top: 1rem;
+          @include button-styles(1rem, 16px);
+        }
+        .error_text,
+        .switch {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .container_auth {
+    flex-direction: row;
+    height: 100dvh;
+
+    .form_wrap {
+      padding: 1.5rem;
+
+      .form_container {
+        h1 {
+          font-size: 32px;
+        }
+        .description {
+          font-size: 14px;
+          margin-bottom: $gap-small;
+        }
+        form {
+          gap: $gap-small;
+          input {
+            @include input-styles(0.75rem 1rem, 14px);
+          }
+          button {
+            @include button-styles(0.75rem, 14px);
+          }
+          .error_text {
+            margin-top: -0.75rem;
+            font-size: 14px;
+          }
+          .switch {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-xs) {
+  .container_auth {
+    .background {
+      display: none;
+    }
+    .form_wrap {
+      padding: $gap-small;
+
+      .form_container {
+        .logo {
+          display: block;
+        }
+        h1 {
+          text-align: left;
+        }
+        .description {
+          text-align: left;
+          font-size: 12px;
+          margin-bottom: 1.5rem;
+        }
+        form {
+          gap: $gap-small;
+          input {
+            @include input-styles(0.75rem 1rem, 12px);
+          }
+          button {
+            @include button-styles(0.75rem 0.5rem, 12px);
+            margin-top: $gap-small;
+          }
+          .error_text,
+          .switch {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* -------------------- Code ---------------------*/
+.container_auth {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100dvh;
+  width: 100vw;
+  overflow: hidden;
+  padding: 0;
+
+  .background {
+    height: 100%;
+    position: relative;
+    transition: 0.2s ease-in-out;
+  }
+
+  .logo {
+    margin-bottom: $gap-small;
+    width: 48px;
+    object-fit: contain;
+    border-radius: 2px;
+  }
+
+  .form_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-grow: 1;
+    transition: 0.2s ease-in-out;
+
+    .form_container {
+      width: 100%;
+      max-width: 492px;
+
+      h1 {
+        margin-bottom: $gap-small;
+        color: var(--black);
+      }
+      .description {
+        color: var(--deep-gray);
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+          width: calc(100% - 2rem);
+          border: 1px solid var(--gray);
+          border-radius: 10px;
+          color: var(--black);
+          &:focus {
+            border-color: var(--purple);
+          }
+          &.error_input {
+            border-color: var(--red);
+          }
+        }
+
+        .error_text {
+          color: var(--red);
+        }
+
+        .switch {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+
+          p {
+            color: var(--deep-gray);
+          }
+
+          a {
+            color: var(--purple);
+            font-weight: 700;
+            &:focus {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
